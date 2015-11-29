@@ -20,7 +20,7 @@ class LeftAlignedLayout: UICollectionViewFlowLayout {
   }
 
   override func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
-    let currentItemAttributes = super.layoutAttributesForItemAtIndexPath(indexPath)
+    let currentItemAttributes = super.layoutAttributesForItemAtIndexPath(indexPath)?.copy() as? UICollectionViewLayoutAttributes
     let sectionInset = evaluatedSectionInsetForItemAtIndex(indexPath.section)
     let isFirstItem = indexPath.item == 0
     let layoutWidth = CGRectGetWidth(collectionView!.frame) - sectionInset.left - sectionInset.right
@@ -33,7 +33,7 @@ class LeftAlignedLayout: UICollectionViewFlowLayout {
     let previousIndexPath = NSIndexPath(forItem: indexPath.item-1, inSection: indexPath.section)
     if let currentItemAttributes = currentItemAttributes,
       previousFrame = self.layoutAttributesForItemAtIndexPath(previousIndexPath)?.frame {
-        let previousFrameRightPoint: CGFloat = previousFrame.origin.x - previousFrame.size.width
+        let previousFrameRightPoint: CGFloat = previousFrame.origin.x + previousFrame.size.width
         let currentFrame = currentItemAttributes.frame
         let strecthedCurrentFrame = CGRect(x: sectionInset.left,
           y: currentFrame.origin.y,

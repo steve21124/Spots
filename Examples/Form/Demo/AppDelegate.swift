@@ -13,14 +13,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     GridSpot.customLayout = LeftAlignedLayout()
 
     let component = Component(title: "Form", items: [
-      ListItem(title: "Firstname", kind: "field", size: CGSize(width: 200, height: 50)),
-      ListItem(title: "Lastname", kind: "field", size: CGSize(width: 200, height: 50)),
-      ListItem(title: "Dispay name", kind: "field", size: CGSize(width: 200, height: 50)),
-      ListItem(title: "Social security number", kind: "field", size: CGSize(width: 200, height: 50)),
-      ListItem(title: "Country code", kind: "field", size: CGSize(width: 200, height: 50)),
-      ListItem(title: "Address", kind: "field", size: CGSize(width: 200, height: 50)),
-      ListItem(title: "Postal code", kind: "field", size: CGSize(width: 200, height: 50)),
-      ListItem(title: "Phone number", kind: "field", size: CGSize(width: 300, height: 50)),
+      ListItem(title: "Firstname", kind: "field", size: CGSize(width: 768 / 4 + 30, height: 50)),
+      ListItem(title: "Lastname", kind: "field", size: CGSize(width: 768 / 4  + 30, height: 50)),
+      ListItem(title: "Dispay name", kind: "field", size: CGSize(width: 768 / 4  + 30, height: 50)),
+      ListItem(title: "Social security number", kind: "field", size: CGSize(width: 768 / 4  + 30, height: 50)),
+
+      ListItem(title: "Country code", kind: "field", size: CGSize(width: 768 / 4 + 30, height: 50)),
+      ListItem(title: "Address", kind: "field", size: CGSize(width: 768 / 4 + 30, height: 50)),
+      ListItem(title: "Postal code", kind: "field", size: CGSize(width: 768 / 4 + 30, height: 50)),
+      ListItem(title: "Phone number", kind: "field", size: CGSize(width: 768 / 4 + 30, height: 50)),
+      
       ListItem(title: "Email adress", kind: "field", size: CGSize(width: 300, height: 50)),
       ListItem(title: "Bank account", kind: "field", size: CGSize(width: 300, height: 50)),
       ])
