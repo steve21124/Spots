@@ -15,12 +15,13 @@ public class GridSpot: NSObject, Spotable, Gridable {
 
   public lazy var layout: UICollectionViewFlowLayout = { [unowned self] in
     let layout = UICollectionViewFlowLayout()
-
     return layout
     }()
 
+  public static var customLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+
   public lazy var collectionView: UICollectionView = { [unowned self] in
-    let collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: self.layout)
+    let collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: GridSpot.customLayout)
     collectionView.backgroundColor = UIColor.whiteColor()
     collectionView.dataSource = self
     collectionView.delegate = self
