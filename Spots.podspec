@@ -19,7 +19,5 @@ Pod::Spec.new do |s|
   s.osx.source_files = 'Sources/{Shared}/**/*'
 
   s.frameworks = 'Foundation'
-  s.dependency 'Sugar', :podspec =>  'https://raw.githubusercontent.com/hyperoslo/Sugar/master/Sugar.podspec'
-  s.dependency 'Tailor', :podspec => 'https://raw.githubusercontent.com/hyperoslo/Brick/master/Brick.podspec'
-  s.dependency 'Brick'
+
 end
