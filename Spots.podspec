@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.osx.source_files = 'Sources/{Shared}/**/*'
 
   s.frameworks = 'Foundation'
-  s.dependency 'Sugar'
-  s.dependency 'Tailor'
-  s.dependency 'Brick'
+  s.dependency 'Sugar', git: 'https://github.com/hyperoslo/Sugar.git'
+  s.dependency 'Tailor', git: 'https://github.com/hyperoslo/Brick.git'
+  s.dependency 'Brick', 
 end
